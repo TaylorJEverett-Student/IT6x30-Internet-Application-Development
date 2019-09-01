@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!--Web Site title--->
+	<title> 8-Bit Game REGISTER</title>
+	<title><?php print $ptitle ?></title>
+	<link rel="icon" href="img/ZombieIcon.png"> <!--browser icon-->
+	<!------------------>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1920, user-scalable=yes, maximum-scale=1">
+	
+	<!--Get Access to css-->
+	<!--link href="Black%20Desert%20Online%20Register_files/css.css" rel="stylesheet" type="text/css"-->
+	<!---Icons and fonts references---->
+	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="img/ZombieIcon.png" type="image/x-icon">
+	<link rel="icon" href="img/ZombieIcon.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/gallerycss.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+		@media (max-width: 1800px) {
+							.gnb_comm .link_gnb{padding:34px 21px !important}
+					}
+	</style>
+	<script type="text/javascript" async="" src="script/recaptcha__en.js"></script><script id="facebook-jssdk" src="script/sdk.js"></script><script async="" src="script/gtm.js"></script><script type="text/javascript" src="script/jquery-1.js"></script>
+
+</head>
+
+<body>
+	
+	<script>
+window.fbAsyncInit = function() {
+   FB.init({
+     appId            : '663791690327711',
+     autoLogAppEvents : true,
+     xfbml            : true,
+     version          : 'v2.9'
+   });
+   FB.AppEvents.logPageView();
+};
+
+(function(d, s, id){
+   var js, fjs = d.getElementsByTagName(s)[0];
+   if (d.getElementById(id)) {return;}
+   js = d.createElement(s); js.id = id;
+   js.src = "//connect.facebook.net/en_US/sdk.js";
+   fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));
+</script>
+
+	
+<script type="text/javascript">
+$(document).ready(function($) {
+	var language_json = {};
+	var form = $("<form/>", {id:'__languageForm',action:'',method:"GET"} );
+	for(var key in language_json) {
+		form.append( $("<input>",{type:'hidden',name:key,value:language_json[key]}) );
+	}
+	$("#_languageForm").append(form);
+	
+	$(".gnb_lang_link").on("click",function(){
+		var form =$("#__languageForm");
+		form.append( $("<input>",{type:'hidden',name:'lang',value:$(this).attr("data-value")}) );
+		form.submit();
+	});
+});
+</script>
+
+<!-----Navigation bar----->
+
+<div class="inner_head">
+				
+<ul class="gnb_comm">
+			
+			
+<!--Home Temp-->
+<li>
+<a href="index.html" class="link_gnb">HOME<span class="img_8bit ico_arr"></span></a>
+</li>
+<!------------->		
+<!---News dropdown menu---->
+<li>
+<a href="news.html" class="link_gnb">NEWS<span class="img_8bit ico_arr"></span></a>
+<!--Deleted-->
+</li>
+<!--------------------------->
+				
+				
+				
+				
+<!--DELETED-->
+				
+				
+
+		
+<!----Login and register buttons----->
+<div id="login"style="float:right;margin-right:10px">
+<li><a href="login.html" class="link_gnb">LOGIN</a></li>
+<li><a href="register.html" class="link_gnb">REGISTER</a></li>
+
+					
+					
+					
+<!----Buy now button----->
+<li><a href="buyform.html" class="">
+<span class="btn_regist" style="margin-top:12%;">BUY NOW</span></a></li>
+</div>
+</div>	
+
+</ul>
+</div>
+<!----End of navigation bar------>	
+
+<hr class="hide">
+	<div class="cont_login" id="kakaoContent">
+		<div id="cMain">
+			<div id="mArticle">
+			<!--Cover Image Needed add in common.css-->
+				<div class="bg_cover"></div>
+				<div class="detail_black">
+					<h2 class="tit_detail" id="kakaoBody">CREATE YOUR ACCOUNT</h2>
+					<p class="desc_login" style="color:#FFF">Join us on your next great happy adventure.</p>
+					
+					
+					<form id="register_form" action="/register/submit" method="POST">
+						<fieldset>
+							<legend class="screen_out">create account form</legend>
+							
+							<div class="form_create">
+								<div class="group_set">  
+									<div class="box_tf">
+										<label class="img_8bit ico_email" for="email">Email</label>
+										<input class="tf_comm" id="email" name="email" placeholder="Email" type="text"><span class="img_8bit ico_error"></span>
+									</div>
+									<span class="txt_error"></span>
+								</div>
+								<div class="group_set ">  
+									<div class="box_tf">
+										<label class="img_8bit ico_password" for="password">Password (8~30 Characters)</label>
+										<input class="tf_comm" id="password" name="password" placeholder="Password (8~30 Characters)" type="password"><span class="img_8bit ico_error"></span>
+									</div>
+									<span class="txt_error"></span>
+								</div>
+								<div class="group_set ">  
+									<div class="box_tf">
+										<label class="img_8bit ico_password" for="passwordConfirm">Confirm Password</label>
+										<input class="tf_comm" id="passwordConfirm" name="passwordConfirm" placeholder="Confirm Password" type="password"> <span class="img_8bit ico_error"></span>
+									</div>
+									<span class="txt_error"></span>
+								</div>
+								<!--js-->
+								<strong class="tit_login">Birthday</strong>
+								<div class="group_set group_birth">  
+									<div class="opt_comm">   
+										<a class="link_selected" href="javascript:void(0)">  
+											<strong class="screen_out">birth Year select box</strong>
+											<label class="sel_value" for="birthYear">Year</label>
+											<span class="screen_out">selected</span> <span class="img_8bit ico_arr"></span>
+										</a>
+										<input class="sel_value" id="birthYear" name="birthYear" type="hidden">
+										<div class="box_opt">
+											<em class="screen_out">select option</em>
+											<ul class="list_opt">
+																								<li><a class="link_option" href="javascript:void(0)">2015</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2014</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2013</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2012</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2011</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2010</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2009</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2008</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2007</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2006</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2005</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2004</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2003</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2002</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2001</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">2000</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1999</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1998</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1997</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1996</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1995</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1994</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1993</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1992</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1991</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1990</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1989</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1988</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1987</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1986</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1985</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1984</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1983</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1982</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1981</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1980</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1979</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1978</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1977</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1976</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1975</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1974</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1973</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1972</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1971</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1970</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1969</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1968</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1967</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1966</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1965</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1964</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1963</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1962</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1961</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1960</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1959</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1958</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1957</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1956</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1955</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1954</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1953</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1952</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1951</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1950</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1949</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1948</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1947</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1946</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1945</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1944</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1943</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1942</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1941</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1940</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1939</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1938</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1937</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1936</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1935</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1934</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1933</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1932</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1931</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1930</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1929</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1928</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1927</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1926</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1925</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1924</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1923</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1922</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1921</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1920</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1919</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1918</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1917</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1916</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1915</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1914</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1913</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1912</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1911</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1910</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1909</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1908</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1907</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1906</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1905</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1904</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1903</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1902</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1901</a></li>
+																								<li><a class="link_option" href="javascript:void(0)">1900</a></li>
+																							</ul>
+										</div>
+									</div>
+									<div class="opt_comm">  
+										<a class="link_selected" href="#none">  
+										<strong class="screen_out">birth Month select box</strong>
+											<label class="sel_value" for="birthMonth">Month</label>
+											<span class="screen_out">selected</span>
+											<span class="img_8bit ico_arr"></span>
+										</a>
+										<input class="sel_value" id="birthMonth" name="birthMonth" type="hidden">
+										<div class="box_opt">
+											<em class="screen_out">select option</em>
+											<ul class="list_opt">
+												
+																												                   																<li><a class="link_option" href="javascript:void(0)">01</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">02</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">03</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">04</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">05</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">06</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">07</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">08</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">09</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">10</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">11</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">12</a></li>
+																							</ul>
+										</div>
+									</div>
+									<div class="opt_comm">  
+										<a class="link_selected" href="#none">  
+										<strong class="screen_out">birth Day select box</strong>
+											<label class="sel_value" for="birthDay">Day</label>
+											<span class="screen_out">selected</span>
+											<span class="img_8bit ico_arr"></span>
+										</a>
+										<input class="sel_value" id="birthDay" name="birthDay" type="hidden">
+										<div class="box_opt">
+											<em class="screen_out">select option</em>
+											<ul class="list_opt">
+												 
+																												                   																<li><a class="link_option" href="javascript:void(0)">01</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">02</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">03</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">04</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">05</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">06</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">07</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">08</a></li>
+																												                   																<li><a class="link_option" href="javascript:void(0)">09</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">10</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">11</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">12</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">13</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">14</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">15</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">16</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">17</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">18</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">19</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">20</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">21</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">22</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">23</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">24</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">25</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">26</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">27</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">28</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">29</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">30</a></li>
+																																				<li><a class="link_option" href="javascript:void(0)">31</a></li>
+																							</ul>
+										</div>
+									</div>
+									<span class="txt_error"></span>
+								</div>
+								<!--agree_create & group_set needed?-->
+								<!--
+								<div class="agree_create">
+									<div class="choice_comm choice_check group_set">
+										<input class="inp_comm" id="termsAgree" name="termsAgree" value="Y" type="checkbox">
+										<label class="lab_comm" for="termsAgree"><span class="img_8bit"></span> I have read <a href="/TermsOfUse.html" class="link_g" target="_blank">TERMS OF USE</a> and <a href=" account/Policy.html" class="link_g" target="_blank">PRIVACY POLICY</a> and accept them. <span class="txt_require">*</span></label>
+										<span class="txt_error"></span>
+									</div>
+									<div class="choice_comm choice_check">
+										<input class="inp_comm" id="newsLetterAgree" name="newsLetterAgree" value="Y" checked="checked" type="checkbox">
+										<label class="lab_comm" for="newsLetterAgree"><span class="img_8bit"></span> Sign me up to receive game newsletters and exclusive offers.</label>
+									</div>
+								</div>
+								<div class="group_set ">
+									<div class="g-recaptcha box_captcha" data-sitekey=" 6LcUJhATAAAAACsKBm1AWeytItsb7VwvxESAiymj" name="recaptcha"><div style="width: 304px; height: 78px;"><div><iframe src="/anchor.htm" role="presentation" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" height="78" frameborder="0" width="304"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid #c1c1c1; margin: 10px 25px; padding: 0px; resize: none;  display: none; "></textarea></div></div>
+									<span id="recaptchaErrorMsg" class="txt_error"></span>
+								</div>-->
+								<center>
+								<button style="margin-top:50px;" id="btn_register" class="" type="button"><span class="btn_regist">SIGN UP</span></button>
+								</center>
+								<!--
+								<div class="social_account ">
+									<span class="txt_social"><span class="inner_txt">Or</span></span>
+									<a class="btn_black btn_facebook" href="javascript:void(0);" onclick="fb_login();"><span class="btn_regist"><span class="img_8bit ico_facebook"></span>Sign up with Facebook </span></a>
+								</div>-->
+								
+								<input id="accessToken" name="accessToken" value="" type="hidden">
+								<input id="socialId" name="socialId" value="" type="hidden">
+								<input id="socialType" name="socialType" value="WEB" type="hidden">
+								<input id="socialEmail" name="socialEmail" value="" type="hidden">
+							</div>
+						</fieldset>
+						
+					</form>
+				</div>
+						
+				</div>
+			
+		<!-- // cMain -->
+	</div>
+	<!-- // kakaoContent -->
+	<hr class="hide">
+	
+	<!--Needed?-->
+	<script type="text/javascript" src="jquery-1.js"></script>
+	<script src="api.js"></script>
+	<script>
+$(document).ready(function(){
+	$('.cont_login .link_selected').click(function(){
+		if($(this).parent().hasClass("opt_open")){
+			$(this).parent().removeClass("opt_open");
+		} else {
+			$(this).parent().addClass("opt_open");
+		}
+	});
+	
+	$('.cont_login .link_option').click(function() {
+		var $fieldObj = $(this).closest('.opt_comm').removeClass('opt_open');
+		var value = $(this).text();
+		$fieldObj.find('.sel_value').val(value).text(value);
+		$fieldObj.find('.link_selected').addClass('selected');
+		$(this).closest('ul').find('li').removeClass('on');
+		$(this).parent().addClass('on');
+	});
+	
+	$('.cont_login .list_opt > li').click(function(){
+		$(this).parent().parent().find(".link_selected").text($(this).text());
+		$(this).parent().parent().find("input").val($(this).text());
+		$(this).parent().parent().removeClass("opt_open");
+	});
+	
+	$(".cont_login input[type=text]").keyup(function(event) {
+		if (event.keyCode == 37 || event.keyCode == 39 || event.keyCode == 8 ) return true;
+		var value = $(this).val();
+		if (value.length > 100) {
+			value = value.substring(0, 100);
+		}
+		$(this).val(value);
+	});
+	
+	$('#btn_register').click(function(e) {
+		e.preventDefault();
+		$('.error').removeClass('error');
+		
+		if (isFormValid()) {
+			$.post('/register/submit', $('#register_form').serialize())
+			.done(function(data) {
+				grecaptcha.reset();
+				
+				if (100 == data.api.code) {
+					if (($('#socialType').val() == 'WEB')) {
+						window.location.href = '/register/success';
+					} else {
+						window.location.href = '/register/email/confirm?socialType=FACEBOOK';
+					}
+					return;
+				}
+				
+				var errorMsg = "";
+				
+				switch (data.api.code) {
+				case 901: 
+					errorMsg = 'Required'; break;
+				case 801:
+					// default
+				case 700: 
+					errorMsg = "Email address must be formatted correctly."; break;
+				case 701:
+					errorMsg = "Password should be consist of 8-30 characters."; break;
+				case 702: 
+					errorMsg = "The same character cannot be used over two consecutive times."; break;
+				case 703: 
+					errorMsg = "Password does not match."; break;
+				case 704: 
+					errorMsg = "You must be 16 or older."; break;
+				case 705: 
+					errorMsg = "Required"; 
+					
+					$('#recaptchaErrorMsg').text(errorMsg);
+					break;
+				case 706: 
+					errorMsg = "Email already exists."; break;
+				default:
+					errorMsg = "Unexpected error occurred. Please try again later.";
+				}
+				
+				if (!data.api.additionalInfo) {
+					alert(errorMsg); return;
+				}
+				
+				var name = data.api.additionalInfo.name;
+				errorMsg = data.api.additionalInfo.errorMsg || errorMsg;
+				
+				var $box = $('[name="' + name + '"]').closest('.group_set');
+				$box.addClass('error').find('.txt_error').text(errorMsg);;
+			})
+			.fail(function(data) {
+				alert("Unexpected error occurred. Please try again later.");
+			})
+		}
+	});
+});
+
+function isFormValid() {
+	var isValid = true;
+	var invalidArr = [];
+	var isNotSocial = $('#socialType').val() == 'WEB';
+	
+	if (!$('#email').val()) {
+		invalidArr.push('email');
+	}
+	if (!$('#password').val() && isNotSocial) {
+		invalidArr.push('password');
+	}
+	if (!$('#passwordConfirm').val() && isNotSocial) {
+		invalidArr.push('passwordConfirm');
+	}
+	if (!$('#birthYear').val() || !$('#birthMonth').val() || !$('#birthDay').val()) {
+		invalidArr.push('birthYear');
+	}
+	if (!$('#termsAgree').prop('checked')) {
+		invalidArr.push('termsAgree');
+	}
+	var recaptchaResponse = grecaptcha.getResponse();
+	if (isNotSocial && (recaptchaResponse.length == 0 ||  recaptchaResponse == '' || recaptchaResponse ===false) ) {
+		invalidArr.push('recaptcha');
+	}
+	
+	$.each(invalidArr, function(idx, name) {
+		var $field = $('[name="' + name + '"]');
+
+		if ($field) {
+// 			console.log(name);
+			var requiredMsg = 'Required';
+			$field.closest('.group_set').addClass('error').find('.txt_error').text(requiredMsg);
+			isValid = false;
+		}
+	});
+	
+	return isValid;
+}
+
+</script>
+<div class="bot">	
+	<center>
+           <b>&copy;8-Bit Game 2018. All rights reserved.</b>
+
+</div>
+</html><!--21600681-->
+<div style="background-color: #fff; border: 1px solid #ccc; box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2); position: absolute; left: 0px; top: -10000px; transition: visibility 0s linear 0.3s, opacity 0.3s linear; opacity: 0; visibility: hidden; z-index: 2000000000;"><div style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 2000000000; background-color: #fff; opacity: 0.05;  filter: alpha(opacity=5)"></div><div class="g-recaptcha-bubble-arrow" style="border: 11px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -11px; z-index: 2000000000;"></div><div class="g-recaptcha-bubble-arrow" style="border: 10px solid transparent; width: 0; height: 0; position: absolute; pointer-events: none; margin-top: -10px; z-index: 2000000000;"></div><div style="z-index: 2000000000; position: relative;"><iframe title="recaptcha challenge" src="bframe.htm" style="width: 100%; height: 100%;" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox" name="3obl0eddig8" frameborder="0"></iframe></div></div></body></html><!--21600681-->

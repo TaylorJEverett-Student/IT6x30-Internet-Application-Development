@@ -1,0 +1,195 @@
+<html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<!--Web Site title--->
+	<title> 8-Bit Game Home</title>
+	<title><?php print $ptitle ?></title>
+	<link rel="icon" href="img/ZombieIcon.png"> <!--browser icon-->
+	<!------------------>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=1920, user-scalable=yes, maximum-scale=1">
+	
+	<!--Get Access to css-->
+	<!--link href="Black%20Desert%20Online%20Register_files/css.css" rel="stylesheet" type="text/css"-->
+	<!---Icons and fonts references---->
+	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet" type="text/css">
+	<link rel="shortcut icon" href="img/ZombieIcon.png" type="image/x-icon">
+	<link rel="icon" href="img/ZombieIcon.png" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/gallerycss.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href rel="stylesheet" href="css/bootstrap.min.css">
+	
+	<style>
+		@media (max-width: 1800px) {
+							.gnb_comm .link_gnb{padding:34px 21px !important}
+					}
+	</style>
+	<script type="text/javascript" async="" src="script/recaptcha__en.js"></script><script id="facebook-jssdk" src="script/sdk.js"></script><script async="" src="script/gtm.js"></script><script type="text/javascript" src="script/jquery-1.js"></script>
+
+</head>
+
+
+<!-----Navigation bar----->
+
+<div class="inner_head">
+				
+<ul class="gnb_comm">
+			
+			
+<!--Home Temp-->
+<li>
+<a href="index.html" class="link_gnb">HOME<span class="img_8bit ico_arr"></span></a>
+</li>
+<!------------->		
+<!---News dropdown menu---->
+<li>
+<a href="news.html" class="link_gnb">NEWS<span class="img_8bit ico_arr"></span></a>
+<!--Deleted-->
+</li>
+<!--------------------------->
+				
+				
+				
+				
+<!--DELETED-->
+				
+				
+<!--DELETED-->
+		
+<!----Login and register buttons----->
+<div id="login"style="float:right;margin-right:10px">
+<div id="login">
+<li><a href="login.html" class="link_gnb">LOGIN</a></li>
+<li><a href="register.html" class="link_gnb">REGISTER</a></li>
+<!--DELETED-->
+					
+					
+					
+<!----Buy now button----->
+<li><a href="buyform.html" class="">
+<span class="btn_regist" style="margin-top:12%;">BUY NOW</span></a></li>
+</div>
+</div>	
+
+</ul>
+</div>
+<!----End of navigation bar------>	
+
+<div class="cont_login" id="kakaoContent">
+<div class="bg_cover">
+			<center>
+			<img style="padding-top:500px;" src="img/8BitGameGif.gif"/>
+			</center>
+</div>
+<div class="cont_news" id="kakaoContent"> 
+</div>
+<!--Content Boxes-->
+		<div id="cMain">
+		
+			<div id="mArticle">
+				
+				
+				  
+				<div class="black_screenshot" ="margin-bottom:40%;">
+				
+					<h3 class="tit_article">MEMBER SCREENSHOTS</h3>
+					
+
+<!-------Gallery Box---------->
+<center>
+<div class="box">
+
+												
+<div class="thumbnails">
+<img onmouseover="preview.src=hiking.src" name="hiking" style="height:300px;" "width:300px;" src="img/screenshot001.png"  alt="" />
+<img onmouseover="preview.src=biking.src" name="biking" style="height:300px;" "width:300px;" src="img/screenshot002.png" alt="" />
+<img onmouseover="preview.src=canoe.src" name="canoe" style="height:300px;" "width:300px;" src="img/screenshot003.png" alt="" />
+<img onmouseover="preview.src=fishing.src" name="fishing" style="height:300px;" "width:300px;" src="img/screenshot004.png"  alt="" />
+													
+</div>
+<div class="preview" align="center">
+<img name="preview" style="height:500px;" "width:300px;" src="img/screenshot001.png" alt=""/><br><br><br>
+</div>
+</div>
+
+<div class="" style="margin-bottom:;" >
+	<!--Need Some way to draw DESCRIPTION from database id?-->
+	<h3 class="tit_article">DESCRIPTION</h3>
+	<div class="detail_black">
+	<p>You are the last survivor in an abandoned town, full of zombies.</p>
+	<p>Make your way through the town and kill any zombie you see, but as you progress, the zombies become increasingly harder to kill.</p>
+	<p>Their numbers and health will increase with every passing wave. Killing zombies has a chance to drop skulls, with these you can buy new upgrades.</p>
+	<p>8-BIT GAME has a vast selection of weapons and perks to chose from to upgrade your character.</p>
+	<p> So try your luck and see how long you can survive in </p>
+	<p>8-BIT GAME.</p>
+	<br>
+	
+	</div>
+
+</div>
+
+<div class="box">
+<img src="img/ChristmasGift.gif" />
+</div>
+	
+ </div>
+<!---->
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
+</script>
+				</div>
+				
+				
+						
+				</div><!--// mArticle -->
+			
+		</div><!-- // cMain -->
+		</div> 
+		</div> 
+		<!--End Content Boxes-->
+
+
+
+
+
+
+	
+
+</header>
+
+
+<div class="bot" style="margin-top:2000px">	
+	<center>
+           <b>&copy;8-Bit Game 2018. All rights reserved.</b>
+
+</div>
+</html><!--21600681-->
